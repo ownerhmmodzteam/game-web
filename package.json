@@ -1,0 +1,10 @@
+{
+  "name": "playroom-game-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive one-page game hub with Vercel serverless support.",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}
