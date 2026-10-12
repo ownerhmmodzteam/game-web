@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0d14">
+<title>Game Hub — Playroom</title>
+<style>
+:root{color-scheme:dark;--bg:#090b12;--panel:#111521;--panel2:#171c2b;--line:#252b3d;--muted:#929bb2;--text:#f5f7ff;--accent:#8b7cff;--accent2:#50e3c2}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(ellipse at 15% -10%,#25204a 0,transparent 42%),radial-gradient(ellipse at 100% 30%,#102b36 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.app{max-width:1440px;margin:auto;padding:24px;min-height:100dvh}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#5e55d9 55%,var(--accent2));box-shadow:0 8px 28px #7869ff35;font-size:22px}.brand h1{font-size:18px;letter-spacing:-.5px;margin:0}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}.status{border:1px solid var(--line);background:#121622b8;padding:9px 13px;border-radius:999px;color:#cbd2e4;font-size:12px;display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px var(--accent2)}.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px}.sidebar,.main-panel{background:#0f1320d9;border:1px solid var(--line);border-radius:24px;box-shadow:0 18px 55px #0003;backdrop-filter:blur(16px)}.sidebar{padding:18px;height:fit-content;position:sticky;top:20px}.side-label{color:#77819a;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:6px 10px 12px}.nav{display:grid;gap:7px}.nav button{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid transparent;color:#b8c0d3;background:transparent;padding:12px;border-radius:14px;transition:.2s}.nav button:hover{background:#ffffff08;color:white}.nav button.active{background:linear-gradient(110deg,#8878ff22,#5ce4c00c);border-color:#8c7cff4a;color:#fff}.nav-icon{width:34px;height:34px;border-radius:11px;background:#1b2132;display:grid;place-items:center;font-size:17px;flex:none}.nav-copy{min-width:0;flex:1}.nav-copy strong{font-size:13px;display:block;font-weight:650}.nav-copy small{display:block;color:#8993aa;font-size:11px;margin-top:3px}.tag{font-size:9px;padding:4px 6px;border-radius:6px;background:#22283a;color:#aeb7cd}.sidebar-note{border-top:1px solid var(--line);margin-top:18px;padding:16px 7px 4px;color:#8993aa;font-size:11px;line-height:1.65}.sidebar-note strong{color:#dce2f3;font-weight:650}.main-panel{padding:24px;min-width:0}.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:22px}.eyebrow{color:var(--accent2);font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.hero h2{font-size:clamp(25px,3vw,38px);letter-spacing:-1.5px;margin:8px 0 8px;line-height:1.1}.hero p{margin:0;color:var(--muted);font-size:13px;line-height:1.6;max-width:520px}.search{width:min(250px,100%);position:relative;flex:none}.search input{width:100%;background:#0b0e17;border:1px solid var(--line);border-radius:13px;padding:12px 14px 12px 38px;color:var(--text);outline:none}.search input:focus{border-color:#8b7cff99}.search span{position:absolute;left:13px;top:10px;color:#8791aa}.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:22px}.game-card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#191e2d,#111521);padding:16px;min-width:0;transition:transform .2s,border-color .2s}.game-card:hover{transform:translateY(-3px);border-color:#7770b866}.game-card.selected{border-color:#8b7cffaa;box-shadow:inset 0 0 0 1px #8b7cff22}.game-art{height:90px;border-radius:13px;display:grid;place-items:center;font-size:36px;margin-bottom:14px;overflow:hidden}.art-dark{background:radial-gradient(circle at 50% 100%,#d977062b,transparent 55%),linear-gradient(135deg,#2a211d,#171922)}.art-bird{background:radial-gradient(circle at 75% 15%,#d9f99d33,transparent 30%),linear-gradient(135deg,#163f42,#172238)}.art-hex{background:radial-gradient(circle at 50% 50%,#a78bfa44,transparent 45%),linear-gradient(135deg,#2b2050,#15172b)}.game-card h3{margin:0 0 6px;font-size:14px}.game-card p{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 14px;min-height:32px}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.pill{font-size:10px;color:#aeb7cb;border:1px solid #30364a;padding:5px 8px;border-radius:999px}.play-btn{border:0;background:#f1efff;color:#19162f;border-radius:10px;padding:8px 12px;font-weight:750;font-size:11px}.play-btn:hover{background:#fff}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 12px}.section-head h3{font-size:13px;margin:0}.section-head span{font-size:11px;color:var(--muted)}.player{border:1px solid var(--line);background:#080a10;border-radius:18px;overflow:hidden}.player-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;background:#131827;border-bottom:1px solid var(--line)}.player-title{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:700}.player-title .live{width:7px;height:7px;border-radius:50%;background:var(--accent2)}.player-actions{display:flex;gap:7px}.mini-btn{border:1px solid #30374a;background:#1a2030;color:#d9e0f0;border-radius:9px;padding:7px 10px;font-size:11px}.mini-btn:hover{background:#252c40}.frame-wrap{height:min(65vh,620px);min-height:320px;position:relative;background:#080a10}.frame-wrap iframe{width:100%;height:100%;display:block;border:0;background:#080a10}.empty{height:100%;min-height:320px;display:grid;place-items:center;text-align:center;padding:28px;color:var(--muted)}.empty .big{font-size:40px;margin-bottom:12px}.empty h3{color:var(--text);font-size:16px;margin:0 0 8px}.empty p{font-size:12px;line-height:1.6;max-width:320px;margin:0}.hint{display:flex;align-items:flex-start;gap:10px;padding:13px 15px;color:#939db3;font-size:11px;line-height:1.6;border-top:1px solid var(--line)}.hint strong{color:#dce3f5}.hidden{display:none!important}.footer{padding:18px 4px 4px;text-align:center;color:#68738c;font-size:10px}.mobile-nav{display:none}
+@media(max-width:1050px){.game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:flex-start;flex-direction:column}.search{width:100%}}
+@media(max-width:760px){.app{padding:14px 12px 90px}.topbar{margin-bottom:16px}.status{font-size:10px;padding:8px 10px}.layout{display:block}.sidebar{display:none}.main-panel{padding:16px;border-radius:20px}.hero h2{font-size:29px}.game-grid{gap:10px}.game-card{padding:12px;border-radius:15px}.game-art{height:72px;font-size:30px}.game-card p{min-height:48px}.pill{display:none}.frame-wrap{height:58vh;min-height:280px}.mobile-nav{position:fixed;display:flex;z-index:5;left:12px;right:12px;bottom:max(10px,env(safe-area-inset-bottom));padding:8px;background:#141827ed;border:1px solid #30364a;border-radius:19px;box-shadow:0 12px 40px #0008;backdrop-filter:blur(20px);gap:5px}.mobile-nav button{flex:1;min-width:0;border:0;background:transparent;color:#98a2b8;border-radius:12px;padding:8px 3px;font-size:10px;display:grid;gap:4px;place-items:center}.mobile-nav button span{font-size:17px}.mobile-nav button.active{background:#8273ff24;color:#fff}.footer{padding-bottom:12px}}
+@media(max-width:380px){.game-grid{grid-template-columns:1fr}.game-card{display:grid;grid-template-columns:65px 1fr;gap:0 12px;align-items:center}.game-art{grid-row:1/4;width:65px;height:75px;margin:0}.game-card h3{align-self:end}.game-card p{min-height:0;margin-bottom:6px}.card-bottom{justify-content:flex-start}.main-panel{padding:12px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+<div class="brand"><div class="brand-mark">✦</div><div><h1>PLAYROOM</h1><p>Your games, one place.</p></div></div>
+<div class="status"><span class="dot"></span> Game Hub <span style="color:#59647b">/</span> <span id="gameCount">3 playable games</span></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<div class="side-label">Library</div>
+<nav class="nav" id="sideNav">
+<button class="active" data-game="all"><span class="nav-icon">▦</span><span class="nav-copy"><strong>All Games</strong><small>Browse library</small></span><span class="tag">3</span></button>
+<button data-game="adarkroom"><span class="nav-icon">🔥</span><span class="nav-copy"><strong>A Dark Room</strong><small>Survival · Text adventure</small></span></button>
+<button data-game="clumsy-bird"><span class="nav-icon">🐦</span><span class="nav-copy"><strong>Clumsy Bird</strong><small>Arcade · Casual</small></span></button>
+<button data-game="hextris"><span class="nav-icon">⬡</span><span class="nav-copy"><strong>Hextris</strong><small>Puzzle · Reflex</small></span></button>
+</nav>
+<div class="side-label" style="margin-top:24px">Other projects</div>
+<nav class="nav">
+<button data-game="desktop"><span class="nav-icon">🖥️</span><span class="nav-copy"><strong>Desktop builds</strong><small>Native game files</small></span><span class="tag">2</span></button>
+</nav>
+<div class="sidebar-note"><strong>Quick tip</strong><br>Choose a game to load it in the built-in player. Use the expand button for a larger view.</div>
+</aside>
+<main class="main-panel">
+<section class="hero">
+<div><div class="eyebrow">THE GAME COLLECTION</div><h2>Pick your next<br>little adventure.</h2><p>A simple home for the games in this repository. Select a title below and jump straight into playing.</p></div>
+<div class="search"><span>⌕</span><input id="search" type="search" placeholder="Search games..." aria-label="Search games"></div>
+</section>
+<section class="game-grid" id="gameGrid">
+<article class="game-card" data-id="adarkroom" data-title="A Dark Room survival text adventure"><div class="game-art art-dark">🔥</div><h3>A Dark Room</h3><p>Start with a fire. Explore, gather resources, and see how far you can go.</p><div class="card-bottom"><span class="pill">Adventure</span><button class="play-btn" data-launch="adarkroom">Play now ↗</button></div></article>
+<article class="game-card" data-id="clumsy-bird" data-title="Clumsy Bird arcade flying"><div class="game-art art-bird">🐦</div><h3>Clumsy Bird</h3><p>A quick arcade challenge. Fly carefully and try to beat your best run.</p><div class="card-bottom"><span class="pill">Arcade</span><button class="play-btn" data-launch="clumsy-bird">Play now ↗</button></div></article>
+<article class="game-card" data-id="hextris" data-title="Hextris puzzle reflex"><div class="game-art art-hex">⬡</div><h3>Hextris</h3><p>A fast-paced hexagon puzzle that tests your timing and reflexes.</p><div class="card-bottom"><span class="pill">Puzzle</span><button class="play-btn" data-launch="hextris">Play now ↗</button></div></article>
+</section>
+<section id="desktopPanel" class="hidden">
+<div class="section-head"><h3>Desktop game builds</h3><span>Native applications</span></div>
+<div class="game-grid">
+<article class="game-card"><div class="game-art art-bird">🏂</div><h3>Snowboarder</h3><p>Repository contains desktop binaries and project files, not a browser-ready game page.</p><div class="card-bottom"><span class="pill">Desktop</span><a class="play-btn" href="https://github.com/ownerhmmodzteam/game-web/tree/unified-game-hub/Snowboarder" target="_blank" rel="noreferrer" style="text-decoration:none">View files ↗</a></div></article>
+<article class="game-card"><div class="game-art art-hex">🐧</div><h3>Tux Vs Dragon</h3><p>Native C game files. This build needs a compatible desktop environment to run.</p><div class="card-bottom"><span class="pill">Desktop</span><a class="play-btn" href="https://github.com/ownerhmmodzteam/game-web/tree/unified-game-hub/TuxVsDragon" target="_blank" rel="noreferrer" style="text-decoration:none">View files ↗</a></div></article>
+</div>
+</section>
+<section id="playerSection">
+<div class="section-head"><h3>Now playing</h3><span id="playerSub">Choose a game to begin</span></div>
+<div class="player">
+<div class="player-head"><div class="player-title"><span class="live"></span><span id="playerTitle">Game player</span></div><div class="player-actions"><button class="mini-btn" id="reloadBtn" disabled>↻ Reload</button><button class="mini-btn" id="expandBtn" disabled>⛶ Expand</button></div></div>
+<div class="frame-wrap" id="frameWrap"><div class="empty"><div><div class="big">🎮</div><h3>Ready when you are</h3><p>Choose one of the games above. It will open here without sending you away from the Game Hub.</p></div></div></div>
+<div class="hint"><span>ⓘ</span><span><strong>Note:</strong> Some games may need a moment to load. If a game does not display correctly, try Reload or open the game in a separate tab.</span></div>
+</div>
+</section>
+<div class="footer">PLAYROOM · Built around your existing game collection</div>
+</main>
+</div>
+</div>
+<nav class="mobile-nav" id="mobileNav"><button class="active" data-game="all"><span>▦</span>Library</button><button data-game="adarkroom"><span>🔥</span>Dark Room</button><button data-game="clumsy-bird"><span>🐦</span>Clumsy</button><button data-game="hextris"><span>⬡</span>Hextris</button><button data-game="desktop"><span>🖥️</span>Desktop</button></nav>
+<script>
+const games={
+ "adarkroom":{title:"A Dark Room",src:"./adarkroom/index.html"},
+ "clumsy-bird":{title:"Clumsy Bird",src:"./clumsy-bird/index.html"},
+ "hextris":{title:"Hextris",src:"./hextris/index.html"}
+};
+const grid=document.getElementById("gameGrid"),playerSection=document.getElementById("playerSection"),desktopPanel=document.getElementById("desktopPanel"),frameWrap=document.getElementById("frameWrap"),playerTitle=document.getElementById("playerTitle"),playerSub=document.getElementById("playerSub"),reloadBtn=document.getElementById("reloadBtn"),expandBtn=document.getElementById("expandBtn"),search=document.getElementById("search");
+let current="";
+function selectGame(id){
+ document.querySelectorAll("[data-game]").forEach(b=>b.classList.toggle("active",b.dataset.game===id));
+ document.querySelectorAll(".game-card[data-id]").forEach(c=>c.classList.toggle("selected",c.dataset.id===id));
+ if(id==="all"){desktopPanel.classList.add("hidden");playerSection.classList.remove("hidden");playerTitle.textContent="Game player";playerSub.textContent="Choose a game to begin";frameWrap.innerHTML='<div class="empty"><div><div class="big">🎮</div><h3>Ready when you are</h3><p>Choose one of the games above. It will open here without sending you away from the Game Hub.</p></div></div>';current="";reloadBtn.disabled=expandBtn.disabled=true;return}
+ if(id==="desktop"){desktopPanel.classList.remove("hidden");playerSection.classList.add("hidden");desktopPanel.scrollIntoView({behavior:"smooth",block:"start"});return}
+ if(!games[id])return;
+ desktopPanel.classList.add("hidden");playerSection.classList.remove("hidden");current=id;playerTitle.textContent=games[id].title;playerSub.textContent="Loaded in the built-in player";frameWrap.innerHTML="";
+ const iframe=document.createElement("iframe");iframe.src=games[id].src;iframe.title=games[id].title;iframe.allow="fullscreen; autoplay; gamepad";iframe.setAttribute("allowfullscreen","");frameWrap.appendChild(iframe);reloadBtn.disabled=expandBtn.disabled=false;playerSection.scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.querySelectorAll("[data-game]").forEach(b=>b.addEventListener("click",()=>selectGame(b.dataset.game)));
+document.querySelectorAll("[data-launch]").forEach(b=>b.addEventListener("click",e=>{e.stopPropagation();selectGame(b.dataset.launch)}));
+document.querySelectorAll(".game-card[data-id]").forEach(c=>c.addEventListener("click",e=>{if(!e.target.closest("button,a"))selectGame(c.dataset.id)}));
+search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();document.querySelectorAll(".game-card[data-id]").forEach(c=>c.classList.toggle("hidden",!c.dataset.title.includes(q)));});
+reloadBtn.addEventListener("click",()=>{if(current)selectGame(current)});
+expandBtn.addEventListener("click",()=>{const f=frameWrap.querySelector("iframe");if(!f)return;if(f.requestFullscreen)f.requestFullscreen();else if(f.webkitRequestFullscreen)f.webkitRequestFullscreen()});
+</script>
+</body>
+</html>
